@@ -6,9 +6,10 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content  text-neutral-content">
                 <div className="">
-                <h1 className="mb-5 text-5xl font-bold">Best Social Event<br/> Management Service<br/> In the Town</h1>
-                <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button className="btn btn-primary">Get Started</button>
+                <h1 className="mb-5 text-5xl font-bold text-[#fafcff]">Best Social Event Management<br/> Service In the Town</h1>
+                <p className="mb-5 text-[#d5dae1]">We bring your events to life! From weddings to parties and special occasions,<br>
+                </br> we turn your dreams into unforgettable moments.</p>
+                <button className="btn btn-warning bg-[#ff6d4a] border-[#ff6d4a] text-[#fafcff]">Get Started</button>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ import Services from './component/Home/Services/Services';
 import Registration from './component/Resgistration/Registration';
 import SignIn from './component/SignIn/SignIn';
 import LearnMore from './component/LearnMore/LearnMore';
-import About from './About/About';
+import About from './component/About/About';
 
 const router = createBrowserRouter([
   {

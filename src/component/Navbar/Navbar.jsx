@@ -9,12 +9,10 @@ const Navbar = () => {
                 <p>Elegant Celebrations</p>
             </div>
             <div className="navbar-center lg:flex">
-                <ul className="grid grid-cols-6 gap-6 px-1">
+                <ul className="grid grid-cols-6 pl-16 gap-6">
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/about'>About</NavLink></li>
-                <li><NavLink to='/services' >Services</NavLink></li>
-                <li><NavLink to='/contact'>Contact Us</NavLink></li>
-                
+                <li><NavLink to='/services' >Services</NavLink></li>             
                 </ul>
             </div>
             {

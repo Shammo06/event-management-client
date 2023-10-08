@@ -26,7 +26,7 @@ const LearnMore = () => {
                 <p>{target.description}</p>
                 <p className='flex '><BiDollar></BiDollar>{target.price}</p>
                 <div className="card-actions">
-                <button onClick={handleClick} className="btn btn-primary">Order Now</button>
+                <button onClick={handleClick} className="btn btn-warning bg-[#ff6d4a] border-[#ff6d4a] text-[#fafcff]">Order Now</button>
                 </div>
             </div>
             <ToastContainer/>
