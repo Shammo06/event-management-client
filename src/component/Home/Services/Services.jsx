@@ -25,15 +25,16 @@ const Services = () => {
             <div className='grid lg:grid-cols-2  gap-5 px-20'>
             {
                 service.map((data) =>(
-                <div key={data.key} className="card bg-base-100 shadow-xl">
+                <div key={data.key} className="card shadow-xl">
+                    <h2 className="card-title card-body text-center items-center rounded-xl">{data.name}</h2>
                 <figure className="">
                     <img src={data.image} className="rounded-xl w-full h-96 " />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{data.name}</h2>
+                    
                     <p>{data.shortDescription}</p>
                     <div className="card-actions">
-                    <button onClick={()=>navigate(`/learnMore/${data.key}`)} className="btn btn-primary">Learn more</button>
+                    <button onClick={()=>navigate(`/learnMore/${data.key}`)} className="btn btn-primary  border-lime-200 text-amber-400">Learn more</button>
                     </div>
                 </div>
                 </div>

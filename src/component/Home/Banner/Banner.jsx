@@ -1,4 +1,5 @@
 import banner from '../../../assets/bride-groom-celebrate-love-nature-generated-by-ai.jpg';
+
 const Banner = () => {
     return (
         <div className="hero min-h-screen"style={{ backgroundImage: `url(${banner})`}}>
@@ -10,7 +11,7 @@ const Banner = () => {
                 <button className="btn btn-primary">Get Started</button>
                 </div>
             </div>
-            </div>
+        </div>
     );
 };
 
