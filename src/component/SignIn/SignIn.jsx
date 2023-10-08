@@ -1,4 +1,5 @@
 import banner from '../../assets/bride-groom-celebrate-love-nature-generated-by-ai.jpg';
+import { FcGoogle } from "react-icons/fc";
 
 const SignIn = () => {
     return (
@@ -25,8 +26,14 @@ const SignIn = () => {
                         <div className="form-control mt-6">
                         <button className="btn btn-primary">SignIn</button>
                         </div>
-                        <button className="border-green-500 border"> Sign In with google</button>
+                        
                     </form>
+                    <div className="form-control mb-6 px-9 ">
+                        <button className="h-12 border rounded-full bg-gray-200">
+                            <h1 className=" flex gap-4 text-xl pl-12 font-semibold"><FcGoogle className="text-3xl"></FcGoogle> Sign In with Google</h1>
+                        </button>
+                    </div>
+                    
 
                     
                 </div>

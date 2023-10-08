@@ -2,43 +2,49 @@
     {
       "key": 1,
       "name": "Wedding",
-      "image": "wedding_image.jpg",
+      "image": "https://i.ibb.co/5hXKMDj/stage-with-white-curtain-that-says-pink-white-it.jpg",
       "price": 300,
+      "shortDescription": "Celebrate your special day with us. Our wedding planning services are tailored to make your once-in-a-lifetime event a dream come true.",
       "description": "Your wedding day is a once-in-a-lifetime event, and we understand its significance. Our wedding planning services are designed to turn your dreams into reality. From the moment you say 'Yes' to the final dance at your reception, we'll be there every step of the way. We meticulously handle every detail, from selecting the perfect venue and creating breathtaking décor to curating a delectable menu and arranging entertainment that will leave your guests in awe. With our expertise and dedication, your special day will be a masterpiece, filled with love, joy, and unforgettable moments."
     },
     {
       "key": 2,
       "name": "Birthday Party",
-      "image": "birthday_image.jpg",
+      "image": "https://i.ibb.co/6yymsNY/cake-cupcakes-are-table-with-balloons-cake-it.jpg",
       "price": 200,
+      "shortDescription": "Make your birthday unforgettable with our personalized party planning services. We cater to your style and preferences to create memorable moments.",
       "description": "Every birthday is a milestone worth celebrating, and we excel at making these moments memorable. Our event planners will work closely with you to design a birthday party that perfectly suits your style and preferences. Whether you envision an intimate gathering with close friends or a grand extravaganza, we have the creativity and resources to bring your vision to life. From unique themes and custom decorations to delicious cuisine and entertainment that keeps the party alive, we ensure your birthday celebration is a reflection of your personality and a day you'll cherish forever."
     },
     {
       "key": 3,
       "name": "Anniversary",
-      "image": "anniversary_image.jpg",
-      "price": 200,
+      "image": "https://i.ibb.co/CPvK62t/istockphoto-1148412193-1024x1024.jpg",
+      "price": 500,
+      "shortDescription": "Celebrate your love story with our anniversary event planning services. We create heartfelt and elegant celebrations to honor your journey together.",
       "description": "Anniversaries mark the enduring love and commitment between two individuals. Our anniversary event planning services are dedicated to creating an elegant and heartfelt celebration that honors your journey together. We understand the sentimental value of this day and take care of all the details, ensuring that your anniversary is a reflection of your love story. From selecting romantic venues to designing tasteful décor and arranging personalized experiences, we aim to create a memorable event that rekindles the spark and deepens your connection."
     },
     {
       "key": 4,
       "name": "New Year Party",
-      "image": "new_year_image.jpg",
-      "price": 200,
+      "image": "https://i.ibb.co/2cSnDws/istockphoto-1171612773-1024x1024.jpg",
+      "price": 350,  
+      "shortDescription": "Welcome the New Year in style with our New Year's Eve party planning services. We create memorable experiences filled with music, dance, and fireworks.",
       "description": "Ring in the New Year with a bang and a touch of sophistication! Our New Year's Eve party planning services are designed to make your transition into the next year truly memorable. We specialize in crafting spectacular events filled with music, dance, and the grandeur of fireworks. Let us handle the logistics while you and your guests enjoy a night of celebration and anticipation, bidding farewell to the old year and welcoming the new one in style."
     },
     {
       "key": 5,
       "name": "Reunion Party",
-      "image": "reunion_image.jpg",
+      "image": "https://i.ibb.co/1Q3H0LC/pexels-agung-pandit-wiguna-2788488.jpg",
       "price": 200,
+      "shortDescription": "Reconnect with old friends and create new memories with our reunion party planning services. We handle all the details for a stress-free and enjoyable experience.",
       "description": "Reuniting with old friends is a cherished experience, and we're here to make it unforgettable. Our event management team specializes in organizing reunion parties that capture the essence of nostalgia and camaraderie. From selecting the perfect venue to planning engaging activities and coordinating every aspect of your gathering, we ensure you have a stress-free and enjoyable time reconnecting with loved ones and creating new memories together."
     },
     {
       "key": 6,
       "name": "Baby Shower",
-      "image": "baby_shower_image.jpg",
-      "price": 200,
+      "image": "https://i.ibb.co/tbkL1W2/istockphoto-1464259187-1024x1024.jpg",
+      "price": 250,
+      "shortDescription": "Celebrate the upcoming arrival of your baby with our joy-filled baby shower planning services. We take care of all the details, allowing you to enjoy the excitement of this special moment.",
       "description": "Anticipating the arrival of your precious bundle of joy is a joyous occasion, and our baby shower planning services are designed to celebrate this special moment in your life. We take pride in creating heartwarming and joy-filled baby showers that reflect your unique style and preferences. From whimsical themes and charming decorations to delightful games and delectable treats, we handle all the details so you can focus on the excitement of welcoming your little one into the world."
     }
   ]

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Services = () => {
@@ -9,28 +10,30 @@ const Services = () => {
         .then(res=> res.json())
         .then(data => setService(data))
     }, [])
-    
-    console.log(service)
+
+    const navigate = useNavigate();
+        
+   
     return (
 
         <div>
-            <div>
+            <div className='text-center py-10'>
                 <h1>Our Services</h1>
                 <p>Our client is our first priority No matter what. </p>
             </div>
 
-            <div>
+            <div className='grid lg:grid-cols-2  gap-5 px-20'>
             {
                 service.map((data) =>(
                 <div key={data.key} className="card bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                    <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                <figure className="">
+                    <img src={data.image} className="rounded-xl w-full h-96 " />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{data.name}</h2>
-                    <p>{data.description}</p>
+                    <p>{data.shortDescription}</p>
                     <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button onClick={()=>navigate(`/learnMore/${data.key}`)} className="btn btn-primary">Learn more</button>
                     </div>
                 </div>
                 </div>

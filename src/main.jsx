@@ -11,6 +11,7 @@ import Root from './component/Root/Root';
 import Services from './component/Home/Services/Services';
 import Registration from './component/Resgistration/Registration';
 import SignIn from './component/SignIn/SignIn';
+import LearnMore from './component/LearnMore/LearnMore';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
       {
         path:"/registration",
         element : <Registration></Registration>  
+      },
+      {
+        path:"/learnMore/:key",
+        loader: () =>fetch('/services.json'),
+        element: <LearnMore></LearnMore>
+        
       }
     ]
   },
