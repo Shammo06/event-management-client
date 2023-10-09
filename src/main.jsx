@@ -16,6 +16,7 @@ import OurStory from './component/OurStory/OurStory';
 import LogIn from './component/LogIn/LogIn';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Feedback from './component/Feedback/Feedback';
 
 const router = createBrowserRouter([
   {
@@ -50,8 +51,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/OurStory",
-        element: <OurStory></OurStory>
-        
+        element: <OurStory></OurStory>        
+      },
+      {
+        path:"/feedback",
+        element: <PrivateRoute><Feedback></Feedback></PrivateRoute>
       }
     ]
   },
