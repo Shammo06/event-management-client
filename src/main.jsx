@@ -10,9 +10,10 @@ import Home from './component/Home/Home';
 import Root from './component/Root/Root';
 import Services from './component/Home/Services/Services';
 import Registration from './component/Resgistration/Registration';
-import SignIn from './component/SignIn/SignIn';
 import LearnMore from './component/LearnMore/LearnMore';
 import About from './component/About/About';
+import OurStory from './component/OurStory/OurStory';
+import LogIn from './component/LogIn/LogIn';
 
 const router = createBrowserRouter([
   {
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
         element: <Services></Services>
       },
       {
-        path:"/signIn",
-        element : <SignIn></SignIn> 
+        path:"/login",
+        element : <LogIn></LogIn>
       },
       {
         path:"/registration",
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path:"/about",
         element : <About></About>  
+      },
+      {
+        path:"/OurStory",
+        element: <OurStory></OurStory>
+        
       }
     ]
   },
