@@ -15,12 +15,12 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>A</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:  
 
-<i>Write your explanation here</i>
+<i>greetign value is {}. that we set in second line. thats why answer is A</i>
 
 </p>
 </details>
@@ -40,12 +40,12 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>C</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
 
-<i>Write your explanation here</i>
+<i>Here a is integer and b is string. thats why 2 is just sit beside 1</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>here food is object and info is another object. we slice the index one value and set in info. so food is unchanged</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>This function need one parameter. but we donot give any. template string use so get value only Hi there , undefined</i>
 
 </p>
 </details>
@@ -122,7 +122,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
 <i>Write your explanation here</i>
 
