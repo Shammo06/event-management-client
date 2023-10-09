@@ -13,8 +13,6 @@ const LearnMore = () => {
             position: toast.POSITION.TOP_CENTER
           });
     }    
-
-
     
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -24,7 +22,7 @@ const LearnMore = () => {
             <div className="card-body items-center">
                 <h2 className="card-title">{target.name}</h2>
                 <p>{target.description}</p>
-                <p className='flex '><BiDollar></BiDollar>{target.price}</p>
+                <p className='flex'>Our Price <BiDollar></BiDollar>{target.price}</p>
                 <div className="card-actions">
                 <button onClick={handleClick} className="btn btn-warning bg-[#ff6d4a] border-[#ff6d4a] text-[#fafcff]">Order Now</button>
                 </div>

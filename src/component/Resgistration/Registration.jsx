@@ -34,13 +34,13 @@ const Registration = () => {
             });
             return;
         }
-        if (/[!@#$%^&*()_+{}[\]:;<>,.?~\\]/.test(password)) {
-            setInputError("Password contains at least one special character.");
-            toast.error(inputError, {
-                position: toast.POSITION.TOP_CENTER
-            });
-            return;
-        }         
+        // if (/[!@#$%^&*()_+{}[\]:;<>,.?~\\]/.test(password)) {
+        //     setInputError("Password contains at least one special character.");
+        //     toast.error(inputError, {
+        //         position: toast.POSITION.TOP_CENTER
+        //     });
+        //     return;
+        //}         
         createUser(email,password)
             .then(result => {
                updateProfile(result.user, {
