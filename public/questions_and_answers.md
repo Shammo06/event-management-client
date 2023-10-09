@@ -15,10 +15,10 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>A</b></summary>
+<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer:  
+#### Answer: A
 
 <i>greetign value is {}. that we set in second line. thats why answer is A</i>
 
@@ -40,10 +40,10 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>C</b></summary>
+<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: 
+#### Answer: C
 
 <i>Here a is integer and b is string. thats why 2 is just sit beside 1</i>
 
@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C
 
-<i>Write your explanation here</i>
+<i>forEach is check value is truly or not. so if value is truly we increase count. so Value is 3</i>
 
 </p>
 </details>
