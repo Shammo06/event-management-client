@@ -22,7 +22,7 @@ const Services = () => {
                 <p className="text-xl">Our client is our first priority. No matter what. </p>
             </div>
 
-            <div className='grid lg:grid-cols-2  gap-5 px-20'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 px-7 md:px-20'>
             {
                 service.map((data) =>(
                 <div key={data.key} className="card shadow-xl">

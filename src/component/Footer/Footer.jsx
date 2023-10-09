@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="">
-            <footer className="footer p-10 bg-neutral text-neutral-content pl-20">
+            <footer className="footer p-10 bg-neutral text-neutral-content ">
             <aside>
                 <p className="pt-10">Elegant Celebrations <br/> Science 2023<br/> Best In The Town</p>
             </aside> 

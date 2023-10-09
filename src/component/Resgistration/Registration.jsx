@@ -19,7 +19,7 @@ const Registration = () => {
         const email = e.target.email.value
         const photo = e.target.photo.value
         const password = e.target.password.value
-        //console.log(password) 
+        
         if (password.length < 6) {
             setInputError("Password length is valid.");
             toast.error(inputError, {
@@ -63,7 +63,7 @@ const Registration = () => {
         <div className="hero min-h-screen"  style={{ backgroundImage: `url(${banner})`}}>
         <div className="hero-overlay bg-opacity-50"></div>
             <div className=" shadow-2xl bg-white">
-                <form onSubmit={handleSubmit} className="card-body w-96">
+                <form onSubmit={handleSubmit} className="card-body md:w-96 w-80">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Your Name</span>

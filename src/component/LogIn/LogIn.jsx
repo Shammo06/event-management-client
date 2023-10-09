@@ -4,7 +4,8 @@ import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import auth from '../../firebase/firebase.config';
 import { useContext } from 'react';
-import { AuthContext } from '../../Context/AuthProvider';import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../../Context/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -43,10 +44,10 @@ const LogIn = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen"  style = {{ backgroundImage: `url(${banner})`}}>
+            <div className="hero md:min-h-screen"  style = {{ backgroundImage: `url(${banner})`}}>
             <div className="hero-overlay bg-opacity-50"></div>
                 <div className=" shadow-2xl bg-white">
-                    <form  onSubmit={handleSubmit} className="card-body w-96">
+                    <form  onSubmit={handleSubmit} className="card-body w-80 md:w-96">
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
