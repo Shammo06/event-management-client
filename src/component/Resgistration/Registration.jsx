@@ -1,38 +1,78 @@
 import { Link } from 'react-router-dom';
 import banner from '../../assets/bride-groom-celebrate-love-nature-generated-by-ai.jpg';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../Context/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+
 
 const Registration = () => {
+    const [inputError , setInputError] = useState();
+
+    const {createUser} = useContext(AuthContext);
+    
+    const handleSubmit = e =>{
+        e.preventDefault();
+        const name = e.target.name.value
+        const email = e.target.email.value
+        const photo = e.target.photo.value
+        const password = e.target.password.value
+
+        if (password.length < 6) {
+            setInputError("Password length is valid.");
+            return
+        }
+        if (!/[A-Z]/.test(password)) {
+            setInputError("Password must be at least one capital letter.");
+            return;
+        }
+          if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)) {
+            setInputError("Password contains at least one special character.");
+            return;
+        } 
+        
+        createUser(email,password)
+            .then(result => {
+               updateProfile(result.user, {
+                    displayName:name, 
+                    photoURL: photo
+                  })
+            }) 
+            .catch (error=>{
+                console.error(error)
+            })
+    }
+    
     return (
         <div className="hero min-h-screen"  style = {{ backgroundImage: `url(${banner})`}}>
         <div className="hero-overlay bg-opacity-50"></div>
             <div className=" shadow-2xl bg-white">
-                <form className="card-body w-96">
+                <form onSubmit={handleSubmit} className="card-body w-96">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Your Name</span>
                     </label>
-                    <input type="text" placeholder="Your Name" className="input input-bordered" required />
+                    <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Your Photo</span>
                     </label>
-                    <input type="text" placeholder="Photo URL" className="input input-bordered" required />
+                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" placeholder="Email" className="input input-bordered" required />
+                    <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="Password" className="input input-bordered" required />
+                    <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
