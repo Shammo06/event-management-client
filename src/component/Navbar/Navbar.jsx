@@ -1,7 +1,20 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider";
 
 
 const Navbar = () => {
+
+    const {user ,logOut}= useContext(AuthContext);
+
+    console.log(user)
+
+    
+   const handleClick=()=>{
+        logOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="lg:navbar  mx-auto bg-[#ffc84a]">
@@ -16,11 +29,17 @@ const Navbar = () => {
                 </ul>
             </div>
             {
-            <div className="navbar-end gap-4">
-                <Link to='/registration'>Registration</Link>
-                <Link to='/logIn'>Sign In</Link>
-                
-            </div>
+                user ? 
+                <div className='navbar-end gap-4'>
+                    <h1>{user.displayName}</h1>
+                    <img src={user.photoURL} alt="" />
+                    <button onClick={handleClick} className="btn">Log Out</button>            
+                </div>
+                : 
+                <div className="navbar-end gap-4">
+                    <Link to='/registration'>Registration</Link>
+                    <Link to='/logIn'>Sign In</Link>                
+                </div>           
             }
             </div>                 
         </div>

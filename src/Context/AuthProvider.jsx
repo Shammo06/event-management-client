@@ -1,7 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import auth from "../firebase/firebase.config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 
@@ -17,16 +17,9 @@ const AuthProvider = ({children}) => {
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
-    }
-
-    const logOut = () => {
-        setLoading(true);
-        return signOut(auth);
-    }
-
+    }   
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('user in the auth state changed', currentUser);
             setUser(currentUser);
             setLoading(false);
         });
@@ -35,9 +28,18 @@ const AuthProvider = ({children}) => {
         }
     }, [])
 
+     const logOut = () => {
+        setLoading(true);
+        return signOut(auth);
+    }
 
     const shareData ={
-        createUser      
+        createUser,
+        signIn,
+        user,
+        logOut,
+        loading   
+
     }
     return (
         <AuthContext.Provider value={shareData} >

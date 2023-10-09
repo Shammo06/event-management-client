@@ -1,32 +1,41 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import banner from '../../assets/bride-groom-celebrate-love-nature-generated-by-ai.jpg';
 import { FcGoogle } from "react-icons/fc";
-import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import auth from '../../firebase/firebase.config';
+import { useContext } from 'react';
+import { AuthContext } from '../../Context/AuthProvider';import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const LogIn = () => {
-
+    
+    const {signIn} = useContext(AuthContext)
     const provider= new GoogleAuthProvider();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSubmit = e =>{
-        e.preventDefault();
-        
+        e.preventDefault();        
         const email = e.target.email.value
         const password = e.target.password.value
-        
-        // console.log(password,email)
-        signInWithEmailAndPassword(auth,email,password)
+        signIn(email,password)
             .then(result => {
-                console.log(result)                
+                console.log(result)
+                navigate(location.state? location.state : '/')                
             }) 
-            .catch (error=>{
-                console.log(error)
+            .catch ((error)=>{
+                toast.error(error.message, {
+                    position: toast.POSITION.TOP_CENTER
+                });
+                            
             })
         }
     const handleClick = () =>{
         signInWithPopup(auth, provider)
         .then(result => {
-            console.log(result.user)                
+            console.log(result.user)
+            navigate('/')                
         }) 
         .catch (error=>{
             console.error(error)
@@ -71,6 +80,7 @@ const LogIn = () => {
                     
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
             
         </div>
     );

@@ -15,6 +15,7 @@ import About from './component/About/About';
 import OurStory from './component/OurStory/OurStory';
 import LogIn from './component/LogIn/LogIn';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       {
         path:"/learnMore/:key",
         loader: () =>fetch('/services.json'),
-        element: <LearnMore></LearnMore>
+        element: <PrivateRoute><LearnMore></LearnMore></PrivateRoute>
         
       },
       {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="pt-10">
+        <div className="">
             <footer className="footer p-10 bg-neutral text-neutral-content pl-20">
             <aside>
                 <p className="pt-10">Elegant Celebrations <br/> Science 2023<br/> Best In The Town</p>
@@ -17,7 +17,7 @@ const Footer = () => {
             <nav>
                 <header className="footer-title">Company</header> 
                 <Link to="about" className="link link-hover">About us</Link> 
-                <Link className="link link-hover">Contact</Link> 
+                <Link to='/OurStory' className="link link-hover">Our Story</Link> 
                 <Link className="link link-hover">Jobs</Link> 
                 <Link className="link link-hover">Press kit</Link>
             </nav> 
